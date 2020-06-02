@@ -21,47 +21,50 @@ repository. It has the next format:
 
 ``` yaml
 config:
-  - name: number_of_fruits
-    description: The number of fruits we have.
+  - name: well_monitoring
+    description: Well monitoring parameters.
     type: gauge
-    labels: [name, color]
+    labels: [well, parameter]
     sequence:
       - time: 5
         time_wait: 1
-        values: 0-20
+        values: 40-60
         operation: inc
         labels:
-          name: apple
-          color: red
+          well: 309
+          parameter: intake_pressure
       - time: 5
         time_wait: 1
-        values: 0-20
+        values: 80-100
         operation: inc
         labels:
-          name: apple
-          color: green
+          well: 309
+          parameter: intake_temperature
       - time: 5
         time_wait: 1
-        values: 0-5
-        operation: dec
-        labels:
-          name: apple
-          color: green
-      - time: 5
-        time_wait: 1
-        value: 3
+        values: 1-10
         operation: inc
         labels:
-          name: apple
-          color: yellow
+          well: 309
+          parameter: vibration_x
+      - time: 5
+        time_wait: 1
+        values: 1-10
+        operation: inc
+        labels:
+          well: 309
+          parameter: vibration_y
 ```
 
 The generated metric will be like this:
 
 ``` text
-number_of_fruits{color="red",name="apple"} 14.0
-number_of_fruits{color="green",name="apple"} 10.0
-number_of_fruits{color="yellow",name="apple"} 4.0
+# HELP well_monitoring Well monitoring parameters.
+# TYPE well_monitoring gauge
+well_monitoring{parameter="intake_pressure",well="309"} 45.0
+well_monitoring{parameter="intake_temperature",well="309"} 86.0
+well_monitoring{parameter="vibration_x",well="309"} 2.0
+well_monitoring{parameter="vibration_y",well="309"} 3.0
 ```
 
 ### Supported keywords
@@ -99,10 +102,10 @@ The ones defined ![here](https://prometheus.io/docs/concepts/metric_types/).
 ## Manual use
 
 ```bash
-git clone https://github.com/alexppg/prometheus-data-generator.git
+git clone https://github.com/RBT-Production/prometheus-data-generator
 virtualenv -p python3 venv
 pip install -r requirements.txt
-python prometheus-data-generator/main.py
+python prometheus_data_generator/main.py
 curl localhost:9000/metrics/
 ```
 
