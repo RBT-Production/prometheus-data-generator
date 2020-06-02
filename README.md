@@ -112,7 +112,7 @@ curl localhost:9000/metrics/
 ## Use in docker
 
 ``` bash
-wget https://raw.githubusercontent.com/alexppg/prometheus-data-generator/master/config.yml
+wget https://raw.githubusercontent.com/RBT-Production/prometheus-data-generator/master/config.yml
 docker run -ti -v `pwd`/config.yml:/config.yml -p 127.0.0.1:9000:9000 \
     alexperezpujol/prometheus-data-generator
 curl localhost:9000/metrics/
