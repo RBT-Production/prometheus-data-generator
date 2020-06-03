@@ -10,7 +10,7 @@ from flask import Flask, Response
 from prometheus_client import Gauge, Counter, Summary, Histogram
 from prometheus_client import generate_latest, CollectorRegistry
 import random
-import random
+
 
 
 logging.basicConfig(
