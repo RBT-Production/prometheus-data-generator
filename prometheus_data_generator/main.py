@@ -9,6 +9,8 @@ import yaml
 from flask import Flask, Response
 from prometheus_client import Gauge, Counter, Summary, Histogram
 from prometheus_client import generate_latest, CollectorRegistry
+import random
+
 
 logging.basicConfig(
     level=logging.ERROR,
@@ -138,6 +140,11 @@ class PrometheusDataGenerator:
                                 metric_object.inc(value)
                             else:
                                 metric_object.labels(*labels).inc(value)
+                       # if operation == "rndm":
+                        #    if labels == []:
+                         #       metric_object.inc(value)
+                          #  else:
+                           #     metric_object.labels(*labels).inc(value)
                         elif operation == "dec":
                             if labels == []:
                                 metric_object.dec(value)

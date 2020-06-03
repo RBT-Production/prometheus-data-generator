@@ -7,6 +7,106 @@ config:
     sequence:
       - time: 5
         time_wait: 1
+        values: random.uniform (63.0, 64.5)
+        operation: set
+        labels:
+          well: 309
+          parameter: Frequency_out
+      - time: 5
+        time_wait: 1
+        values: random.uniform (300, 350)
+        operation: set
+        labels:
+          well: 309
+          parameter: CurrentA_out
+      - time: 5
+        time_wait: 1
+        values: random.uniform (300, 350)
+        operation: set
+        labels:
+          well: 309
+          parameter: CurrentB_out
+      - time: 5
+        time_wait: 1
+        values: random.uniform (300, 350)
+        operation: set
+        labels:
+          well: 309
+          parameter: CurrentC_out
+      - time: 5
+        time_wait: 1
+        values: random.uniform (350, 370)
+        operation: set
+        labels:
+          well: 309
+          parameter: Voltage_out
+      - time: 5
+        time_wait: 1
+        values: random.uniform (350, 420)
+        operation: set
+        labels:
+          well: 309
+          parameter: VoltageAB_in
+      - time: 5
+        time_wait: 1
+        values: random.uniform (350, 420)
+        operation: set
+        labels:
+          well: 309
+          parameter: VoltageBC_in
+      - time: 5
+        time_wait: 1
+        values: random.uniform (350, 420)
+        operation: set
+        labels:
+          well: 309
+          parameter: VoltageCA_in
+      - time: 5
+        time_wait: 1
+        values: random.uniform (90, 95)
+        operation: set
+        labels:
+          well: 309
+          parameter: Motor_torque
+      - time: 5
+        time_wait: 1
+        values: random.uniform (32.5, 36.5)
+        operation: set
+        labels:
+          well: 309
+          parameter: Intake_pressure
+      - time: 5
+          time_wait: 1
+          values: random.uniform (90, 95)
+          operation: set
+          labels:
+            well: 309
+            parameter: Intake_temperature
+      - time: 5
+          time_wait: 1
+          values: random.uniform (110, 115)
+          operation: set
+          labels:
+            well: 309
+            parameter: Motor_temperature
+      - time: 5
+          time_wait: 1
+          values: random.uniform (0, 10)
+          operation: set
+          labels:
+            well: 309
+            parameter: Vibration_x
+      - time: 5
+          time_wait: 1
+          values: random.uniform (0, 10)
+          operation: set
+          labels:
+            well: 309
+            parameter: Vibration_y
+
+      """
+      - time: 5
+        time_wait: 1
         values: 40-60
         operation: inc
         labels:
@@ -40,3 +140,4 @@ config:
         labels:
           well: 309
           parameter: motor_temperature
+      """
