@@ -80,14 +80,14 @@ config:
         values: 90-95
         operation: set
         labels:
-          well:
+          well: 309
           parameter: Intake_temperature
       - time: 5
         time_wait: 1
         values: 110-115
         operation: set
         labels:
-          well: 309add
+          well: 309
           parameter: Motor_temperature
       - time: 5
         time_wait: 1

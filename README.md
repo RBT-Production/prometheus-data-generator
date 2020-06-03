@@ -28,39 +28,102 @@ config:
     sequence:
       - time: 5
         time_wait: 1
-        values: 40-60
-        operation: inc
+        values: 63-64
+        operation: set
         labels:
           well: 309
-          parameter: intake_pressure
+          parameter: Frequency_out
       - time: 5
         time_wait: 1
-        values: 80-100
-        operation: inc
+        values: 300-350
+        operation: set
         labels:
           well: 309
-          parameter: intake_temperature
+          parameter: CurrentA_out
       - time: 5
         time_wait: 1
-        values: 1-10
-        operation: inc
+        values: 300-350
+        operation: set
         labels:
           well: 309
-          parameter: vibration_x
+          parameter: CurrentB_out
       - time: 5
         time_wait: 1
-        values: 1-10
-        operation: inc
+        values: 300-350
+        operation: set
         labels:
           well: 309
-          parameter: vibration_y
+          parameter: CurrentC_out
       - time: 5
         time_wait: 1
-        values: 30-50
-        operation: inc
+        values: 350-370
+        operation: set
         labels:
           well: 309
-          parameter: motor_temperature
+          parameter: Voltage_out
+      - time: 5
+        time_wait: 1
+        values: 350-420
+        operation: set
+        labels:
+          well: 309
+          parameter: VoltageAB_in
+      - time: 5
+        time_wait: 1
+        values: 350-420
+        operation: set
+        labels:
+          well: 309
+          parameter: VoltageBC_in
+      - time: 5
+        time_wait: 1
+        values: 350-420
+        operation: set
+        labels:
+          well: 309
+          parameter: VoltageCA_in
+      - time: 5
+        time_wait: 1
+        values: 90-95
+        operation: set
+        labels:
+          well: 309
+          parameter: Motor_torque
+      - time: 5
+        time_wait: 1
+        values: 32-36
+        operation: set
+        labels:
+          well: 309
+          parameter: Intake_pressure
+      - time: 5
+        time_wait: 1
+        values: 90-95
+        operation: set
+        labels:
+          well: 309
+          parameter: Intake_temperature
+      - time: 5
+        time_wait: 1
+        values: 110-115
+        operation: set
+        labels:
+          well: 309
+          parameter: Motor_temperature
+      - time: 5
+        time_wait: 1
+        values: 0-10
+        operation: set
+        labels:
+          well: 309
+          parameter: Vibration_x
+      - time: 5
+        time_wait: 1
+        values: 0-10
+        operation: set
+        labels:
+          well: 309
+          parameter: Vibration_y
 ```
 
 The generated metric will be like this:
