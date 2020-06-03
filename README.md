@@ -54,6 +54,13 @@ config:
         labels:
           well: 309
           parameter: vibration_y
+      - time: 5
+        time_wait: 1
+        values: 30-50
+        operation: inc
+        labels:
+          well: 309
+          parameter: motor_temperature
 ```
 
 The generated metric will be like this:
